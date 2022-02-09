@@ -1,0 +1,44 @@
+  
+body{
+     font-size: 2em;
+     width: 50%;
+     background-color: rgb(220, 245, 226);
+ }
+ 
+ h1 {
+   color: rgb(15, 54, 35);
+   font-size:4em;
+   font-family: fantasy;
+   text-align: center;
+}
+
+p{
+     font-family: serif;
+}
+
+ul {
+     font-family: sans-serif;
+     color:rgb(65, 12, 57)
+}
+
+a:hover{
+     color: cyan;
+}
+
+.row {
+     display: flex;
+     width: 200%;
+}
+   
+.column {
+     flex: 50%;
+}
+
+hr {
+     width: 200%;
+}
+
+img {
+     margin-left: 10%;
+     border-radius: 20%;
+}
