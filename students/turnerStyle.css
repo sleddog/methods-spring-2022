@@ -1,0 +1,25 @@
+  
+body{
+     font-size: 2em;
+     width: 50%;
+ }
+ 
+ h1 {
+   color: rgb(15, 54, 35);
+   font-size:4em;
+   font-family: fantasy;
+   text-align: center;
+}
+
+p{
+     font-family: serif;
+}
+
+ul {
+     font-family: sans-serif;
+     color:rgb(65, 12, 57)
+}
+
+a:hover{
+     color: cyan;
+}
