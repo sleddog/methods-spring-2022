@@ -1,0 +1,23 @@
+  
+  body{
+      font-family: papyrus;
+  }
+  
+  h1 {
+    color: navy;
+    position: relative;
+  }
+
+  a{
+      padding: 8px 18px;
+      text-align: center;
+      text-decoration: none;
+      border: 1px solid black;
+      color: blue;
+  }
+
+  a:hover{
+      text-decoration: underline;
+      border: 2px solid black;
+      color: red
+  }
