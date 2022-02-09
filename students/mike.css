@@ -1,0 +1,39 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    background-color: greenyellow;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    position: relative
+}
+
+p{
+    float: right;
+    font-size: 20px    
+}
+
+
+li{
+  display: inline-block;
+  margin-left: 70px;    
+}
+body{
+    border-color: red;
+    border-width: 10px;
+}
+
+
