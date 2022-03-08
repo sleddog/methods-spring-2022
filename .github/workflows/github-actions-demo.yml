@@ -17,4 +17,13 @@ jobs:
       - name: python installed? 
         run: |
           which python 
+      - name: python version 
+        run: |
+          python -v
+      - name: python3 installed? 
+        run: |
+          which python3 
+      - name: python3 version 
+        run: |
+          python3 -v
       - run: echo "🍏 This job's status is ${{ job.status }}."
