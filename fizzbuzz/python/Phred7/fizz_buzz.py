@@ -1,3 +1,8 @@
+###############################
+# For CSCI455 Industry Methods at Montana State University in Spring 2022.
+# Written by Walker Ward aka Phred7
+###############################
+
 import re
 import sys
 from typing import Dict
@@ -6,6 +11,10 @@ from typing import Dict
 def fizz_buzz(integer: int) -> str:
     """
     Solves the fizzbuzz problem.
+    The local dictionary `fizz_buzz_dict: Dict[int, str] = {3: "Fizz", 5: "Buzz"}` may be modified to add or remove
+    support for more values that replace actual integer value in the return string. Each key in this dictionary is
+    modded with each number in (0, input] if the result is 0 then the value of the key in this dict is appended to the
+    str returned by this function.
     :param integer: An integer greater than or equal to 1.
     :return: str representation of this fizzbuzz solution.
     """
@@ -24,12 +33,12 @@ def fizz_buzz(integer: int) -> str:
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        first_command_line_argument: str = sys.argv[1]
-        if re.match("[-+]?\d*[.]?\d+$", first_command_line_argument) is not None:
-            first_command_line_argument_integer: int = int(float(first_command_line_argument))
+    if len(sys.argv) > 1:   # verifies that there is more than one command line argument. We want the second argument.
+        command_line_argument: str = sys.argv[1]
+        if re.match("[-+]?\d*[.]?\d+$", command_line_argument) is not None:  # verifies that command_line_argument is a number using a regex.
+            first_command_line_argument_integer: int = int(float(command_line_argument))  # convert to an int.
             if first_command_line_argument_integer > 0:
-                print(fizz_buzz(first_command_line_argument_integer))
+                print(fizz_buzz(first_command_line_argument_integer))   # call fizz_buzz solution function and print result.
             else:
                 print(f"input parameter \'{sys.argv[1]}\' is not greater than 0")
         else:
