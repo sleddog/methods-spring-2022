@@ -1,4 +1,3 @@
 #!/bin/bash
 
-echo hello world
-python fizz_buzz.py "$*"
+python3 fizz_buzz.py "$*"
