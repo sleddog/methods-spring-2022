@@ -1,16 +1,14 @@
 import sys
 
-def main():
-    count = int(sys.argv[1]) + 1
+def fizzbuzz(count):
+    stringOut = ""
 
     for i in range(1, count):
-        if i%3 == 0:
-            print("Fizz", end="")
-        if i%5 == 0:
-            print("Buzz", end="")
-        if i%3 != 0 and i%5 != 0:
-            print(str(i), end="")
-        print()
-    
+        if i%3 == 0: stringOut += "Fizz"
+        if i%5 == 0: stringOut += "Buzz"
+        if (i%3 != 0 and i%5 != 0): stringOut += str(i)
+        stringOut += "\n"
 
-main()
+    return stringOut
+    
+print(fizzbuzz(int(sys.argv[1]) + 1))
