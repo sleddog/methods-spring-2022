@@ -20,10 +20,7 @@ jobs:
       - name: python version 
         run: |
           python --version
-      - name: python3 installed? 
+      - name: example unit test 
         run: |
-          which python3 
-      - name: python3 version 
-        run: |
-          python3 --version
+          cd testing/python/person; python -m unittest -v PersonTest.Test
       - run: echo "🍏 This job's status is ${{ job.status }}."
