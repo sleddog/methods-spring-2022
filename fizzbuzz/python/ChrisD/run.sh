@@ -1,2 +1,2 @@
 #!/bin/sh
-python fizz.py 30
+python fizz.py $1
