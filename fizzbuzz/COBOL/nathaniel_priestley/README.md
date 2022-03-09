@@ -7,10 +7,8 @@ WEBSITE: https://brew.sh/
 2. INSTALL COBOL COMPILER:
 brew install gnu-cobol
 
-3. OTHER COMMANDS:
-brew update
+3. VERIFY COMMAND:
 cobc -v
-
 
 
 TO COMPILE:
