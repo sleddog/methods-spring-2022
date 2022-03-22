@@ -4,6 +4,7 @@ Assignment 3
 -----------------------------------
 How to run Mikes FizzBuzz solution:
 - navigate to the directory fizzbuzz/java/mikegotta
+- change your permission with:  chmod +x runner.sh
 - to run Mikes FizzBuzz type the following into your terminal
 	"./runFizzBuzz.sh X"
 
