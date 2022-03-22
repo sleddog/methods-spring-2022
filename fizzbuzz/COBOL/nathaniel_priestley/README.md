@@ -17,3 +17,6 @@ cobc -free -x -o FizzBuzz-exe FizzBuzz
 
 TO RUN:
 ./run.sh
+
+IF DENIED EXECUTION
+/chmod +x run.sh
