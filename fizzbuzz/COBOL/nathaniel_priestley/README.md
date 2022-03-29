@@ -16,7 +16,8 @@ cobc -free -x -o FizzBuzz-exe FizzBuzz
 
 
 TO RUN:
-./run.sh
+./run.sh (x)
+Where x is some number less than 100
 
 IF DENIED EXECUTION
 /chmod +x run.sh
