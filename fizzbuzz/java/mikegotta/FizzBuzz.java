@@ -1,41 +1,46 @@
-import java.util.ArrayList;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package fizzbuzz;
 
 ////  Welcome to FizzBuzz, this program takes an integer as a   ////
 ////  commandline argument and runs that integer searching for  ////
-////  divisible integers by 3, 5, and 15 and prints             ////
-////  Fizz, Buzz, and FizzBuzz respectively.                    ////
+////  divisible integers by 3, 5, 7, and 11 and prints          ////
+////  Fizz, Buzz, Ping, and Pong respectively.                   ////
 
 public class FizzBuzz {
 
-    public static void fizzBuzz(int number){
-        int step = 1;
-        ArrayList<String> printToConsole = new ArrayList<>();
-        while (step <= number){
-            if (step%15 == 0){
-                printToConsole.add("FizzBuzz");
-            }
-            else if (step%5 == 0 ){
-                printToConsole.add("Buzz");
-            }
-            else if (step%3 ==0 ){
-                printToConsole.add("Fizz");
-            }
-            else{
-                printToConsole.add(String.valueOf(step));
-            }
-            step++;
+    public static String fizzBuzz(int number){
+        String output = "";
+        if (number%3 ==0 ){
+            output += "Fizz";
         }
-        printFizzBuzz(printToConsole);
+        if (number%5 == 0 ){
+            output += "Buzz";
+        }
+        if (number%7 ==0 ){
+           output += "Ping";
+        }
+        if (number%11 ==0 ){
+            output += "Pong";
+        }
+        if (output.equals("")){
+            output += String.valueOf(number);
+        }
+        return output;
     }
-
-    public static void printFizzBuzz(ArrayList<String> printing){
-        for (String s : printing) {
-            System.out.println(s);
-        }
+    
+    public void printFizzBuzz(String output){
+        System.out.println(output);
     }
 
     public static void main(String[] args) {
-	int number = Integer.parseInt(args[0]);
-        fizzBuzz(number);
+        int number = Integer.parseInt(args[0]);
+        FizzBuzz fb = new FizzBuzz();
+        for (int i = 1; i <= number; i++){
+            fb.printFizzBuzz(fb.fizzBuzz(i));
+        }
     }
 }
