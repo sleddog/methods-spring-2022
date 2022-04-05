@@ -31,9 +31,4 @@ def FizzBuzz(num):
 if __name__ == "__main__":
     input_number = int(sys.argv[1])
     runFizzBuzz(input_number)
-"""
-def main(input_number):
-    runFizzBuzz(input_number)
 
-main(int(sys.argv[1]))
-"""
