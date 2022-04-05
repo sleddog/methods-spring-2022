@@ -20,6 +20,10 @@ def fizzBuzz(num):
             line_to_print += "Fizz"
         if (i % 5 == 0):
             line_to_print += "Buzz"
+        if (i % 7 == 0):
+            line_to_print += "Ping"
+        if (i % 11 == 0):
+            line_to_print += "Pong"
 
         if (line_to_print == ""):
             print(i)
