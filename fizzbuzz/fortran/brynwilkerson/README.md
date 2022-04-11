@@ -1,4 +1,14 @@
-# To install GCC for Windows:
+# Easy Instructions
+
+
+Run `./run.sh N` from command line in `/fizzbuzz/brynwilkerson` with N being the max value of FizzBuzz.
+
+
+# To Compile First
+
+Follow these steps if the above doesn't work or if you want to edit the source code.
+
+## To install GCC for Windows:
 Follow these steps to install MinGW and add it to your PATH:
 https://capsis.cirad.fr/capsis/documentation/mingw-installation
 
@@ -11,13 +21,9 @@ ensure that the PATH variables have been updated.
 
 Run gfortran --version if you are unsure whether it is installed.
 
-# Running the shell script:
-Run ./run.sh n in the command line, and replace n with the number you want to use.
+## Running the shell script:
 
-# Error fixing:
-If you get errors from ```./run.sh n``` then you may have to run commands manually first.
-
-Run the following commands in /brynwilkerson: 
+Run the following commands in `/fizzbuzz/brynwilkerson`: 
 
 ```
 gfortran -c fizz.f90
@@ -31,4 +37,4 @@ gfortran -o fizzbuzz main.o fizz.o
 gfortran -o tests tests.o fizz.o
 ```
 
-Then running ```run.sh n``` should work.
+Then running ```run.sh N``` should work.
