@@ -6,6 +6,7 @@
 import re
 import sys
 from typing import Dict
+import unittest
 
 
 def fizz_buzz(integer: int) -> str:
@@ -19,7 +20,9 @@ def fizz_buzz(integer: int) -> str:
     :return: str representation of this fizzbuzz solution.
     """
     fizz_buzz_dict: Dict[int, str] = {3: "Fizz",
-                                      5: "Buzz"}
+                                      5: "Buzz",
+                                      7: "Ping",
+                                      11: "Pong"}
     return_str: str = ""
     for value in range(1, integer+1):
         value_str: str = ""
@@ -30,7 +33,6 @@ def fizz_buzz(integer: int) -> str:
             value_str += str(value)
         return_str += f"{value_str}\n"
     return return_str
-
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:   # verifies that there is more than one command line argument. We want the second argument.
