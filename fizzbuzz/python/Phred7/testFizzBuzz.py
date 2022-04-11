@@ -1,10 +1,6 @@
 import unittest
 import fizz_buzz
 
-if __name__ == "__main__":
-    str = fizz_buzz.fizz_buzz(3).split()[-1]
-    print(str)
-
 class TestFizzBuzz(unittest.TestCase):
     def test_fizz(self):
         print("Testing Fizz ...")
