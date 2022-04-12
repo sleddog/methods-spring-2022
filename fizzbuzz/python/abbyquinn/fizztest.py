@@ -20,3 +20,6 @@ class TestFizzBuzz(unittest.TestCase):
     def test7and11(self):
         self.assertEqual("PingPong", fizzbuzz.fizzBuzz(77).split()[-1])
         print("test7and11 passed")
+    def test3and5and7and11(self):
+        self.assertEqual("FizzBuzzPingPong", fizzbuzz.fizzBuzz(1155).split()[-1])
+        print("test3and5and7and11 passed")
