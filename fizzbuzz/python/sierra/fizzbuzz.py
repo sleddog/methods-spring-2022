@@ -1,7 +1,7 @@
 import sys
 
 
-def fizzbuzz(n):
+def fizzbuzz(n: int):
     for num in range(1, n + 1):
         if num % 15 == 0:
             print("FizzBuzz")
@@ -13,7 +13,7 @@ def fizzbuzz(n):
             print(num)
 
 
-def main(number):
+def main(number: int):
     fizzbuzz(number)
 
 
