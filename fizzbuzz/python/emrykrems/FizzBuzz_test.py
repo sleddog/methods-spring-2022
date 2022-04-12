@@ -3,7 +3,7 @@ from FizzBuzz import FizzBuzz
 def test_2_For2():
     assert FizzBuzz(2) == 2
 
-def test_9_For13():
+def test_13_For13():
     assert FizzBuzz(13) == 13
 
 def test_Fizz_For3():
