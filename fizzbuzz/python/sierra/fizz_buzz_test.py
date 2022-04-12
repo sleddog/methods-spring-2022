@@ -5,7 +5,8 @@ from fizzbuzz import fizzbuzz
 
 class FizzBuzzTests(unittest.TestCase):
 
-    def call_fizz_buzz(self, n_integer: int) -> str:
+    @staticmethod
+    def call_fizz_buzz(n_integer: int) -> str:
         return fizzbuzz(n_integer).lower().split('\n')[-2]
 
     def test_fizz(self) -> None:
