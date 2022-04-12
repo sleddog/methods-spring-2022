@@ -18,5 +18,4 @@ def main(number):
 
 
 # Run main using the command line argument
-
 main(int(sys.argv[1]))
