@@ -1,7 +1,8 @@
 import sys
 
+
 def fizzbuzz(n):
-    for num in range(1, n+1):
+    for num in range(1, n + 1):
         if num % 15 == 0:
             print("FizzBuzz")
         elif num % 3 == 0:
@@ -11,8 +12,10 @@ def fizzbuzz(n):
         else:
             print(num)
 
+
 def main(number):
     fizzbuzz(number)
+
 
 # Run main using the command line argument
 
