@@ -1,4 +1,4 @@
-from fbSolution import fizzbuzz
+from fizzBuzz import fizzbuzz
 
 def test_1_is_1():
      assertEqual(FizzBuzz(1), 1)
