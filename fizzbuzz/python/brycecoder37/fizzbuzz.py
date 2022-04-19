@@ -29,16 +29,12 @@ def fizzBuzz(num):
             print(i)
         else:
             print(line_to_print)
+    return line_to_print
 
 # -------------------------------------
 
-def main(number):
-    fizzBuzz(number)
-
-
-
-# Run main using the command line argument
-
-main(int(sys.argv[1]))
+if __name__ == "__main__":
+    num = int(sys.argv[1])
+    fizzBuzz(num)
 
 
