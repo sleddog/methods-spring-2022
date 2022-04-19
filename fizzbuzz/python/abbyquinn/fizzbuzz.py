@@ -17,7 +17,7 @@ def fizzBuzz(val):
             print("FizzBuzz")
         if i%7 == 0 and i%11 != 0:
             print("Ping")
-        if 1%11 == 0 and i%7 != 0:
+        if i%11 == 0 and i%7 != 0:
             print("Pong")
         if i%7 == 0 and i%11 == 0:
             print("PingPong")
