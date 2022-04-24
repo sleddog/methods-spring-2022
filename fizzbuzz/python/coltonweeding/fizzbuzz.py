@@ -1,26 +1,27 @@
 import sys
+
 class FizzBuzz:
 
-    def __init__(self, number):
-        self.number = number
-        self.line = ""
+    def LoopFizzBuzz(self, number):
+        for i in range(1, number + 1):
+            print(self.FizzBuzz(i))
 
-    def FizzBuzz(self):
+    def FizzBuzz(self, i):
         line = ""
+        if (i % 3 == 0):
+            line += "Fizz"
+        if (i % 5 == 0):
+            line += "Buzz"
+        if (i % 7 == 0):
+            line += "Ping"
+        if (i % 11 == 0):
+            line += "Pong"
+        if not line:
+            return i
+        else:
+            return line
 
-        for i in range(1, self.number + 1):
-            if (i % 3 == 0):
-                line += "Fizz"
-            if (i % 5 == 0):
-                line += "Buzz"
-            if not line:
-                print(i)
-            else:
-                print(line)
-            line = ""
 
-def main():
-    fizzbuzz = FizzBuzz(int(sys.argv[1]))
-    fizzbuzz.FizzBuzz()
-
-main()
+if __name__ == "__main__":
+    fizzbuzz = FizzBuzz()
+    fizzbuzz.LoopFizzBuzz(int(sys.argv[1]))
