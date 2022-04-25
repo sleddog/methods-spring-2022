@@ -1,0 +1,25 @@
+import unittest
+import fizzbuzz
+
+class TestFizzBuzz(unittest.TestCase):
+    def test5(self):
+        self.assertEqual("Buzz", fizzbuzz.fizzBuzz(5).split()[-1])
+        print("test5 passed")
+    def test3(self):
+        self.assertEqual("Fizz", fizzbuzz.fizzBuzz(3).split()[-1])
+        print("test3 passed")
+    def test7(self):
+        self.assertEqual("Ping", fizzbuzz.fizzBuzz(7).split()[-1])
+        print("test7 passed")
+    def test11(self):
+        self.assertEqual("Pong", fizzbuzz.fizzBuzz(11).split()[-1])
+        print("test11 passed")
+    def test5and3(self):
+        self.assertEqual("FizzBuzz", fizzbuzz.fizzBuzz(15).split()[-1])
+        print("test5and3 passed")
+    def test7and11(self):
+        self.assertEqual("PingPong", fizzbuzz.fizzBuzz(77).split()[-1])
+        print("test7and11 passed")
+    def test3and5and7and11(self):
+        self.assertEqual("FizzBuzzPingPong", fizzbuzz.fizzBuzz(1155).split()[-1])
+        print("test3and5and7and11 passed")
