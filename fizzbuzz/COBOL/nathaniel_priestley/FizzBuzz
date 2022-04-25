@@ -28,6 +28,8 @@
 				END-IF
 			END-IF.
 
+
+
 			DIVIDE WS-count BY 5 GIVING WS-buzzIn REMAINDER WS-buzzOut.
 			IF WS-buzzOut = 0 AND WS-count NOT = 0 AND WS-fizzOut NOT = 0
 				DISPLAY "BUZZ"

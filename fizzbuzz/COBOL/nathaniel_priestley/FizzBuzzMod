@@ -1,0 +1,95 @@
+        IDENTIFICATION DIVISION.
+        PROGRAM-ID. FIZZBUZZ.
+
+        DATA DIVISION.
+                WORKING-STORAGE SECTION.
+                        01 WS-count PIC 9(2) VALUE 1.
+                        01 WS-fizzREM PIC 9(2).
+                        01 WS-buzzREM PIC 9(2).
+			01 WS-pingREM PIC 9(2).
+			01 WS-pongREM PIC 9(2).
+                        01 WS-runs PIC 9(2).
+			01 WS-Dummy PIC 9(2).
+			
+			01 WS-STR PIC X(10) VALUE ' '.
+			01 WS-Fizz PIC X(10) VALUE 'Fizz'.
+			01 WS-Buzz PIC X(10) VALUE 'Buzz'.
+			01 WS-Ping PIC X(10) VALUE 'Ping'.
+			01 WS-Ping PIC X(10) VALUE 'Pong'.
+
+        PROCEDURE DIVISION.
+		Main.
+			ACCEPT WS-runs.
+			DISPLAY "Begin FizzBuzz execution.".
+                        PERFORM ToFizzBuzz UNTIL WS-count > WS-runs
+                        STOP RUN.
+
+                ToFizzBuzz.
+                        DIVIDE WS-count BY 3 GIVING WS-Dummy REMAINDER WS-fizzREM.
+                        DIVIDE WS-count BY 5 GIVING WS-Dummy REMAINDER WS-buzzREM.
+                        DIVIDE WS-count BY 7 GIVING WS-Dummy REMAINDER WS-pingREM.
+                        DIVIDE WS-count BY 11 GIVING WS-Dummy REMAINDER WS-pongREM.
+
+		        IF  WS-fizzREM NOT = 0 AND WS-buzzREM NOT = 0 AND WS-pingREM NOT = 0 AND WS-pongREM NOT = 0
+                            DISPLAY " " WS-count
+        		END-IF.
+		*> FIZZ          
+                        IF WS-fizzREM = 0 AND WS-buzzREM = 0 AND WS-pingREM = 0 AND WS-pongREM = 0
+                                DISPLAY 'FizzBuzzPingPong'
+                        END-IF.
+                                
+                        IF WS-fizzREM = 0 AND WS-buzzREM = 0 AND WS-pingREM = 0 AND WS-pongREM NOT = 0
+                                DISPLAY 'FizzBuzzPing'
+                        END-IF.
+                        
+                        IF WS-fizzREM = 0 AND WS-buzzREM = 0 AND WS-pongREM = 0 AND WS-pingREM NOT = 0
+                                DISPLAY 'FizzBuzzPong'
+                        END-IF.
+                        
+                        IF WS-fizzREM = 0 AND WS-pingREM = 0 AND WS-pongREM = 0 AND WS-buzzREM NOT = 0
+                                DISPLAY 'FizzPingPong'
+                        END-IF.
+                        
+                        IF WS-fizzREM = 0 AND WS-buzzREM = 0 AND WS-pingREM NOT = 0 AND WS-pongREM NOT = 0
+                            DISPLAY 'FizzBuzz'
+                        END-IF.
+                        
+                        IF WS-fizzREM = 0 AND WS-pingREM = 0 AND WS-buzzREM NOT = 0 AND WS-pongREM NOT = 0
+                            DISPLAY 'FizzPing'
+                        END-IF.
+                        
+                        IF WS-fizzREM = 0 AND WS-pongREM = 0 AND WS-buzzREM NOT = 0 AND WS-pingREM NOT = 0
+                            DISPLAY 'FizzPong'
+                        END-IF.
+                        
+                        IF WS-fizzREM = 0 AND WS-buzzREM NOT = 0 AND WS-pingREM NOT = 0 AND WS-pongREM NOT = 0
+                            DISPLAY 'Fizz'
+                        END-IF.
+             	*> BUZZ           
+                        IF WS-buzzREM = 0 AND WS-pingREM = 0 AND WS-pongREM = 0 AND WS-fizzREM NOT = 0
+                            DISPLAY 'BuzzPingPong'
+                        END-IF.
+                        
+                        IF WS-buzzREM = 0 AND WS-pingREM = 0 AND WS-pongREM NOT = 0 AND WS-fizzREM NOT = 0
+                            DISPLAY 'BuzzPing'
+                        END-IF.
+                        
+                        IF WS-buzzREM = 0 AND WS-pingREM NOT = 0 AND WS-pongREM = 0 AND WS-fizzREM NOT = 0
+                            DISPLAY 'BuzzPong'
+                        END-IF.
+                        IF WS-buzzREM = 0 AND WS-pingREM NOT = 0 AND WS-pongREM NOT = 0 AND WS-fizzREM NOT = 0
+                            DISPLAY 'Buzz'
+                        END-IF.
+            	*> PING
+                        IF WS-pingREM = 0 AND WS-pongREM = 0 AND WS-fizzREM NOT = 0 AND WS-buzzREM NOT = 0
+                            DISPLAY 'PingPong'
+                        END-IF.
+                        IF WS-pingREM = 0 AND WS-pongREM NOT = 0 AND WS-fizzREM NOT = 0 AND WS-buzzREM NOT = 0
+                            DISPLAY 'Ping'
+                        END-IF.
+                *> PONG
+                        IF WS-pongREM = 0 AND WS-fizzREM NOT = 0 AND WS-buzzREM NOT = 0 AND WS-pingREM NOT = 0
+                            DISPLAY 'Pong'
+                        END-IF.
+                        
+                        ADD 1 TO WS-count.
