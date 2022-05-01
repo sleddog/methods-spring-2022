@@ -1,6 +1,4 @@
-[submodule "emry_final"]
-	path = emry_final
-	url = git@github.com:emrykrems/Industry-Methods-FinalProj-2022.git
+
 [submodule "projects/emry_final"]
 	path = projects/emry_final
 	url = git@github.com:emrykrems/Industry-Methods-FinalProj-2022.git
