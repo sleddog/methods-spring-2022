@@ -20,21 +20,21 @@ def fizzBuzz(num):
             line_to_print += "Fizz"
         if (i % 5 == 0):
             line_to_print += "Buzz"
+        if (i % 7 == 0):
+            line_to_print += "Ping"
+        if (i % 11 == 0):
+            line_to_print += "Pong"
 
         if (line_to_print == ""):
             print(i)
         else:
             print(line_to_print)
+    return line_to_print
 
 # -------------------------------------
 
-def main(number):
-    fizzBuzz(number)
-
-
-
-# Run main using the command line argument
-
-main(int(sys.argv[1]))
+if __name__ == "__main__":
+    num = int(sys.argv[1])
+    fizzBuzz(num)
 
 
